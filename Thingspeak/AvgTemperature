@@ -1,0 +1,24 @@
+% Read temperature over the last 10 minutes from a ThingSpeak channel and calculate the average
+
+% Channel ID to read data from
+readChannelID = 1244813;
+% Temperataure Field ID
+temperatureFieldID = 1;
+% Channel Read API Key
+readAPIKey = 'CT0F0IOPPO8QPFDO';
+
+temperature = thingSpeakRead(readChannelID,'Fields',temperatureFieldID,'NumMinutes',10,'ReadKey',readAPIKey);
+
+% Calculate the average temperature
+avgTemperature = mean(temperature);
+display(avgTemperature,'Average Temperature');
+
+
+% Channel ID to write data to
+writeChannelID = 1249641;
+% Channel Write API Key
+writeAPIKey = 'D0GZ1A0G8IISVUEB';
+% avgTemperataure Field ID
+avgTemperatureFieldID = 1;
+
+thingSpeakWrite(writeChannelID,avgTemperature,'WriteKey',writeAPIKey,'Fields',avgTemperatureFieldID);
