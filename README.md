@@ -84,7 +84,7 @@ Source code, Arduino C, JS or Python, committed to (this) project repo.
 ### Live demo
 Working end-to-end prototype, "device to cloud", part of your 10' presentation.
 
-[https://MY_TEAM_PROJECT_DEMO_HOST:PORT/](https://MY_TEAM_PROJECT_DEMO_HOST:PORT/)
+[YouTube](https://youtu.be/rVSUsYXkLBY)
 
 1) Sensor input on a IoT device triggers an event.
 2) The event or measurement shows up online, in an app or Web client.
